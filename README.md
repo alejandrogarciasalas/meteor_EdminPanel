@@ -1,4 +1,4 @@
-### Meteor 9.0+ Boilerplate
+### Meteor 1.0+ Boilerplate
 ---
 
 ##### Packages:
