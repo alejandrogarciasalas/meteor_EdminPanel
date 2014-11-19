@@ -1,0 +1,142 @@
+.sidebar-left {
+	min-height: 100;
+	height: 100%;
+	background: $blue-darker;	
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+	display: none;
+	// padding-top: 70px;
+	.top {
+		height: 70px;
+		background: white;
+		.logo {
+			display: block;
+			padding: 14px 7px;
+			img {
+				width: 63px;
+				height: auto;
+			}			
+		}
+	}
+	> ul.center {
+		@include list-unstyled;
+		li {
+			// text-align: center;
+			position: relative;
+			a {
+				display: block;
+				padding: $container-fluid;
+				@include clearfix;
+				position: relative;
+				&:hover {
+					background: darken($blue-darker, 3%);
+					text-decoration: none;
+				}
+				&.active {
+					background: $blue-darker;
+					@include box-shadow(inset 2px 0 0 0 $brand-primary);
+				}
+				i:first-child {
+					margin-right: $container-fluid;
+					font-size: 16px;
+				}
+				i:last-child {
+					&:before {
+						content: "\e760";
+						font-family: "icomoon";
+						font-style: normal;
+						font-weight: normal;
+						font-variant: normal;
+						text-transform: none;
+						line-height: 1;
+
+						/* Better Font Rendering =========== */
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+					}
+					display: none;
+					position: absolute;
+					top: 18px;
+					right: 21px;
+				}
+				span {
+					font-size: 14px;
+				}
+			}
+			&.has-dropdown {
+				a {
+					i:last-child {
+						display: block;
+					}
+				}
+			}
+			> ul.sidebar-left-dropdown {
+				@include list-unstyled;
+				padding: 0;
+				display: none;
+				li {
+					a {
+						padding: $container-fluid / 2 $container-fluid;
+						background: lighten($blue-dark, 3%);
+						&:hover {
+							background: $blue-darker;
+						}
+					}
+				}
+			}
+			&.dropdown-open {
+				a {
+					i:last-child {
+						&:before {
+							content: "\e75f";
+							font-family: "icomoon";
+							speak: none;
+							font-style: normal;
+							font-weight: normal;
+							font-variant: normal;
+							text-transform: none;
+							line-height: 1;
+
+							/* Better Font Rendering =========== */
+							-webkit-font-smoothing: antialiased;
+							-moz-osx-font-smoothing: grayscale;
+						}
+					}
+				}
+				> ul.sidebar-left-dropdown {
+					display: block;
+				}
+			}
+		}
+	}
+	> ul.bottom {
+		position: absolute;
+		bottom: 0;
+		background: darken($blue-darker, 3%);
+		@include list-unstyled;
+		width: 100%;
+		li {
+			a {
+				display: block;
+				padding: $container-fluid;
+				&:hover {
+					text-decoration: none;
+					background: darken($blue-darker, 7%);
+				}
+				img {
+					border-radius: 50%;
+					width: 28px;
+					height: 28px;
+					margin-right: $container-fluid;
+				}
+				i:first-child {
+					margin-right: $container-fluid;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,110 @@
+// Bootstrap 3 Custom Forms
+.panel-form-custom {
+	form {
+		button[type="submit"] {
+			&.btn-panel-form {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+				padding: 18px 16px;
+			}
+		}
+		label {
+			display: block;
+			margin: 7px 0;
+		}
+		input[type="radio"].radio-custom {
+			& ~ label {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.panel-form-custom {
+	.result {
+		@include transition(all 0.2s ease-in-out 0.1s);
+		@include transform(translateY(0));
+		position: absolute;
+		width: 100%;
+		min-height: 231px;
+		background: white;
+	}
+	&.on-submit-success {
+		form {
+			@include transform(translateX(-100%));
+			@include transition(all 0.2s ease-in-out);
+		}
+		.result {
+			@include transform(translateY(-100%));
+			@include transition(all 0.2s ease-in-out 0.1s);
+		}
+		.after-action {
+			opacity: 1;
+			@include transition(all 0.2s ease-in-out 0.3s);
+		}
+	}
+	.after-action {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 1000;
+		opacity: 0;
+		padding: 7px;
+		a {
+			color: $brand-danger;
+		}
+	}
+}
+
+// RADIO CUSTOM
+input[type="radio"].radio-custom {
+	display: none;
+	+ label {
+		cursor: pointer;
+		@include book;
+		&:before {
+			font-family: "icomoon";
+			content: "\e797";
+			margin-right: 3px;
+		}
+	}
+	&:checked + label {
+		&:before {
+			font-family: "icomoon";
+			content: "\e77f";
+		}
+	}
+}
+
+// CHECKBOX CUSTOM
+input[type="checkbox"].checkbox-custom {
+	display: none;
+	+ label {
+		cursor: pointer;
+		@include book;
+		&:before {
+			font-family: "icomoon";
+			content: "\e797";
+			margin-right: 3px;
+		}
+	}
+	&:checked + label {
+		&:before {
+			font-family: "icomoon";
+			content: "\e770";
+		}
+	}
+}
+
+// Form overrides 
+.select-override {
+  @include user-select(none);
+  position: relative;
+  text-indent: 1px;
+  text-overflow: "";
+  &.input-lg {
+    line-height: 28px;
+    // background: white url(/img/arrow-down.svg) no-repeat 98%;
+  }
+}

@@ -1,0 +1,20 @@
+<template name="layout">
+	<div class="site-wrapper sidebar-left-shrink fixed-nav-top">
+	
+		{{> yield 'navTop'}}
+
+		{{> yield 'sidebarLeft'}}
+
+		<div class="site-content"> <!-- SITE CONTENT -->
+	    <div class="body">
+				{{> yield}}
+			</div>
+			<div class="footer">
+				{{> yield 'footer'}}
+			</div>
+		</div>
+
+		{{> yield 'sidebarRight'}}
+
+	</div>
+</template>

@@ -1,0 +1,16 @@
+<template name="authLayout">
+	<div class="site-wrapper fixed-nav-top">
+	
+		{{> yield 'navTop'}}
+
+		<div class="site-content"> <!-- SITE CONTENT -->
+	    <div class="body">
+				{{> yield}}
+			</div>
+			<div class="footer">
+				{{> yield 'footer'}}
+			</div>
+		</div>
+
+	</div>
+</template>

@@ -1,0 +1,35 @@
+.table {
+	&.table-custom {
+		thead {
+			tr {
+				td {
+					background: darken(white, 7%);
+					text-transform: uppercase;
+					padding: $container-fluid ($container-fluid / 2);
+					color: $gray-light;
+					border-left: 1px solid $gray-lighter;
+					border-right: 1px solid $gray-lighter;
+					&:hover {
+						color: $gray;
+						background: darken(white, 14%);
+					}
+					font-size: 12px;
+				}
+			}
+		}
+		tbody {
+			tr {
+				background: #fff;
+				td {
+					vertical-align: middle;
+					border-left: 1px dotted $gray-light;
+					border-right: 1px dotted $gray-light;
+					background: none;
+				}
+				&:hover {
+					background: rgba($brand-primary, 0.2);
+				}
+			}
+		}
+	}
+}

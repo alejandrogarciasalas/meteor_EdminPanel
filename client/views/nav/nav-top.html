@@ -1,0 +1,31 @@
+<template name="navTop">
+	<div class="nav-top"> <!-- NAV TOP -->
+    <div class="container-fluid pl-0-sm pr-0-sm">
+      <div class="flex-space-between normalize-text">
+        <div>
+          <ul class="nav-top-left">
+            {{#if currentUser}}
+              <li>
+                <a href="#" class="logo"><img src="/img/icon_EdminPanel-on.png" alt="logo_EdminPanel-on" width="35" height="auto"></a>
+              </li>
+            {{else}}
+              <li>
+                <a href="#" class="logo"><img src="/img/icon_EdminPanel-off.png" alt="logo_EdminPanel-off" width="35" height="auto"></a>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+        <div>
+          <ul class="nav-top-right light">
+            {{#if currentUser}}
+              <li><a href="#">Teachers</a></li>
+              <li><a href="#">Students</a></li>
+            {{else}}
+              <li><a href="#">Login</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> <!-- END:NAV TOP -->
+</template>

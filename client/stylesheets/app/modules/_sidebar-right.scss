@@ -1,0 +1,21 @@
+.sidebar-right {
+	display: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	background: lighten($gray-lighter, 3%);
+	width: 280px;
+	padding-top: 70px;
+	@include box-shadow(-1px 0px 1px 0px rgba($gray-light, 0.3));
+	.body {
+		.top {
+			// height: 70px;
+			border-bottom: 1px solid $gray-lighter;
+			padding: $grid-gutter-width $container-fluid;
+			span {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
