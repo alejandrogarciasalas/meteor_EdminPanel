@@ -5,7 +5,7 @@
 
 __Meteor__
 
-- backbone
+- underscore
 - accounts-base
 - accounts-password
 - email
