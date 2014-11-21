@@ -2,8 +2,9 @@
 
 $.iGrowl.prototype.defaults.placement.y = 'bottom';
 
-growl = function(message){
+growl = function(message, type){
 	$.iGrowl({
+		'type': type,
 		'message': i18n.t(message),
 		'placement[x]': 'right',
 		'placement[y]': 'bottom',
@@ -12,7 +13,3 @@ growl = function(message){
 		'animHide': 'bounceOut'
 	});
 };
-
-// Template.registerHelper('iGrowl', function(message){
-
-// });

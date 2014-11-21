@@ -142,20 +142,20 @@
     color: $blue-lighter; }
 
 .igrowl-error {
-  background: #FFA1A1;
-  border-color: #F58585; }
+  background: $brand-danger;
+  border-color: darken($brand-danger, 3%); }
   .igrowl-error .igrowl-message, .igrowl-error .igrowl-title {
-    color: #712A2A; }
+    color: $blue-lighter; }
   .igrowl-error .igrowl-icon {
-    color: #743838; }
+    color: $blue-lighter; }
 
 .igrowl-success {
-  background: #ADDA6E;
-  border-color: #7EB137; }
+  background: $brand-info;
+  border-color: darken($brand-info, 3%); }
   .igrowl-success .igrowl-message, .igrowl-success .igrowl-title {
-    color: #2B4711; }
+    color: $blue-lighter; }
   .igrowl-success .igrowl-icon {
-    color: #254911; }
+    color: $blue-lighter; }
 
 .igrowl-notice {
   background: #FFE35A;

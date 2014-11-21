@@ -29,6 +29,9 @@ Schemas.Ticket = new SimpleSchema({
   'status': {
     type: String
   },
+  'userRef': {
+    type: String
+  },
   'usersRef': {
     type: [String],
     optional: true

@@ -22,18 +22,25 @@ Template.ticketNew.events({
 		  'passPhrase': ticketPassphrase,
 		  'ticketFor': ticketFor,
 		  'status': 'active',
-		  'usersRef': '',
+		  'userRef': Meteor.userId(),
+		  'usersRef': [''], // Contains userId's if ticket is sent to existent users
 		  'limit': limit
 		};
 
-		Tickets.insert(ticketObj, function(err){
-			if (err) {
-				console.log(err.message);
-			} else {
-				// alert('Message was saved succesfully');
-				growl('Ticket has been sent successfully');
-			}
-		});
+		if (Meteor.userId()) {
+			Tickets.insert(ticketObj, function(err){
+				if (err) {
+					growl(err.message, 'error');
+				} else {
+					// alert('Message was saved succesfully');
+					growl('Ticket has been sent successfully', 'success');
+					$('#ticket-send').find('input[type=text], input[type=email], textarea').val('');
+				}
+			});
+		} else {
+			growl('You need to be logged in to send tickets', 'error');
+		}
+
 
 		// console.log(ticketFor);
 		// console.log(ticketTo);

@@ -12,8 +12,9 @@ Template.authSignup.events({
     };
     Accounts.createUser(doc, function(err) {
       if (err) {
-        
+        growl(err.message, 'error');
       } else {
+        growl('Your account was created successfully', 'success');
         Router.go('users.index');
       }
     });

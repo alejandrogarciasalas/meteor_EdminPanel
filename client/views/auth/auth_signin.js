@@ -8,8 +8,9 @@ Template.authSignin.events({
 
     Meteor.loginWithPassword(email, password, function(err) {
       if (err) {
-        console.log(err.reason);
+        growl(err.message, 'error');
       } else {
+        growl('Welcome back!', 'success');
         Router.go('users.index');
       }
     });   
