@@ -32,4 +32,13 @@
 			}
 		}
 	}
+	&.table-condensed-custom {
+		tbody {
+			tr {
+				td {
+					border: none;
+				}
+			}
+		}
+	}
 }

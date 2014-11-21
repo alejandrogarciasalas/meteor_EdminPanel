@@ -1,10 +1,10 @@
 <template name="sidebarLeft">
 	<div class="sidebar-left"> <!-- SIDEBAR LEFT -->
     <ul class="center">
-      <li><a href="#"><i class="icon-graph"></i> <span>Cursos</span></a></li>
+      <li><a href="{{pathFor 'tickets.index'}}" class="{{returnIfRoute 'tickets.index' 'active'}} {{returnIfRoute 'ticket.new' 'active'}}"><i class="icon-ticket"></i> <span>Tickets</span></a></li>
     </ul>
     <ul class="bottom">
-      <li class="user"><a href="#"><img src="/img/user.jpg" alt=""><span>G. Andrés Ibarra</span></a></li>
+      <li class="user"><a href="{{pathFor 'user.show'}}"><img src="/img/user.jpg" alt=""><span>G. Andrés Ibarra</span></a></li>
       <li><a href="#" id="signout"><i class="icon-power"></i> <span>Salir</span></a></li>
     </ul>
   </div> <!-- END:SIDEBAR LEFT -->

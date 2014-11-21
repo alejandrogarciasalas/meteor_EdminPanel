@@ -1,0 +1,36 @@
+<template name="ticketsIndex">
+	<div class="page-control">
+		<div class="container-fluid">
+		  <ul class="flex-space-between">
+		    <li></li>
+		    <li><a href="{{pathFor 'ticket.new'}}" class="btn btn-outline btn-sm btn-danger">Create ticket</a></li>
+		  </ul>
+		</div>
+	</div>
+	<div class="table-responsive">
+		<table class="table table-hover table-custom">
+		  <thead>
+		    <tr>
+		      <td>Ticket Id</td>
+		      <td>Pass-phrase</td>
+		      <td>Created at</td>
+		      <td>Created by</td>
+		      <td>Ticket for</td>
+		      <td>Ticket status</td>
+		      <td>Ticket limit</td>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Ax5mbXF2xfreD</td>
+		      <td>green glass door</td>
+		      <td>DD/MM/YYYY</td>
+		      <td>Username</td>
+		      <td>Auth</td>
+		      <td><span class="label label-primary">Active</span> <span class="label label-danger">Closed</span></td>
+		      <td>25</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</template> 

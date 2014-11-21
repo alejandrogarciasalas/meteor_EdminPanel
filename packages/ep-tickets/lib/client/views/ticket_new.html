@@ -1,0 +1,48 @@
+<template name="ticketNew">
+	<div class="container-xs pvp-7">
+		<div class="panel bg-white">
+			<div class="head">
+				<div class="title">
+					<h5 class="uppercase">
+						{{i18n 'Create a new ticket'}}
+					</h5>
+				</div>
+				<div class="actions pt-7">
+					<nav>
+						<a href="#">Send to existent users</a>
+						<span>|</span>
+						<a href="{{pathFor 'tickets.index'}}" class="text-danger">{{i18n 'Cancel'}}</a>
+					</nav>
+				</div>
+			</div>
+			<form action="" id="ticket-send">
+				<div class="body p-14">
+					<div class="form-group">
+						<label for="">Ticket for:</label>
+						<select name="" id="ticket-for" class="form-control select-override">
+							<option value="auth.admins">Inviting admins to join Edmin Panel</option>
+							<option value="auth.teachers">Inviting teachers to join Edmin Panel</option>
+							<option value="auth.students">Inviting students to join Edmin Panel</option>
+							<option value="groups">Inviting people to join one of my groups</option>
+							<option value="event">Inviting teachers to an event</option>
+							<option value="assistance">Inviting people to take assistance</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="">Invite new users:</label>
+						<textarea name="" id="ticket-to" rows="3" class="form-control" placeholder="email1@mail.com, email2@mail.com, ..."></textarea>
+						<small class="help-block">{{i18n 'Separate emails with commas'}}</small>
+					</div>
+					<div class="form-group">
+						<label for="">Passphrase:</label>
+						<input id="ticket-passphrase" type="text" class="form-control">
+						<small class="help-block">Users receiving this ticket can use this passphrase instead of an ID</small>
+					</div>
+				</div>
+				<div class="footer p-14 text-right">
+					<button type="submit" class="btn btn-danger">{{i18n 'Send'}}</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</template>

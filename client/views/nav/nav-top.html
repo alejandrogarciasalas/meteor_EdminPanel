@@ -13,13 +13,16 @@
                 <a href="#" class="logo"><img src="/img/icon_EdminPanel-off.png" alt="logo_EdminPanel-off" width="35" height="auto"></a>
               </li>
             {{/if}}
+            <li class="page-name">
+              <h3>{{view.title}}</h3>
+            </li>
           </ul>
         </div>
         <div>
           <ul class="nav-top-right light">
             {{#if currentUser}}
               <li><a href="#">Teachers</a></li>
-              <li><a href="#">Students</a></li>
+              <li><a href="{{pathFor 'users.index'}}">Students</a></li>
             {{else}}
               <li><a href="#">Login</a></li>
             {{/if}}

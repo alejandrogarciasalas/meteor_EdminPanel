@@ -36,7 +36,7 @@
 					text-decoration: none;
 				}
 				&.active {
-					background: $blue-darker;
+					background: darken($blue-darker, 3%);
 					@include box-shadow(inset 2px 0 0 0 $brand-primary);
 				}
 				i:first-child {
