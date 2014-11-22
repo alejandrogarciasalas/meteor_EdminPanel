@@ -1,6 +1,7 @@
 /* =========================
 	TICKETS
 	========================== */
+var userId = Meteor.userId();
 Router.route('/tickets-index', {
 	template: 'ticketsIndex',
 	name: 'tickets.index',
@@ -8,8 +9,12 @@ Router.route('/tickets-index', {
 		return {
 			view: {
 				title: i18n.t('Tickets created by you')
-			}
+			},
+			tickets: Tickets.find({userRef: userId})
 		}
+	},
+	waitOn: function(){
+		return Meteor.subscribe('userTickets', Meteor.userId());
 	}
 });
 

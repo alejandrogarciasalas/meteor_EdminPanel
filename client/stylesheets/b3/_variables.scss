@@ -24,6 +24,9 @@ $brand-info:            #8DB5DF !default;
 $brand-warning:         #EBA84A !default;
 $brand-danger:          #DB5841 !default;
 
+$state-active: 					$brand-primary;
+$state-closed: 					$brand-danger;
+
 // EBM:REF
 $brand-inverse: 				#081A26 !default;
 
@@ -68,7 +71,9 @@ $brand-colors-list:
 	$blue-dark, 
 	$blue, 
 	$blue-light, 
-	$blue-lighter;
+	$blue-lighter,
+	$state-active,
+	$state-closed;
 
 $social-colors-list: 
 	$color-facebook,
@@ -99,7 +104,9 @@ $brand-colors-sufix-list:
 	'blue-dark', 
 	'blue', 
 	'blue-light', 
-	'blue-lighter';
+	'blue-lighter',
+	'active',
+	'closed';
 
 $social-colors-sufix-list: 
 	'facebook',

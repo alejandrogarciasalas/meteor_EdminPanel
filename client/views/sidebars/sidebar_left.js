@@ -16,3 +16,9 @@ Template.sidebarLeft.events({
 		}
 	}
 });
+
+Template.sidebarLeft.helpers({
+	userOwnProfile: function(){
+		return '/user-show/' + Meteor.userId();
+	}
+});

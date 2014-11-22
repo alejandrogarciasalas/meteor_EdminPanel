@@ -122,7 +122,8 @@
 			a {
 				display: block;
 				padding: $container-fluid;
-				&:hover {
+				&:hover,
+				&.active {
 					text-decoration: none;
 					background: darken($blue-darker, 7%);
 				}

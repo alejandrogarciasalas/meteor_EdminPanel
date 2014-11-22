@@ -14,22 +14,22 @@
 		      <td>Ticket Id</td>
 		      <td>Pass-phrase</td>
 		      <td>Created at</td>
-		      <td>Created by</td>
 		      <td>Ticket for</td>
 		      <td>Ticket status</td>
 		      <td>Ticket limit</td>
 		    </tr>
 		  </thead>
 		  <tbody>
+		  	{{#each tickets}}
 		    <tr>
-		      <td>Ax5mbXF2xfreD</td>
-		      <td>green glass door</td>
-		      <td>DD/MM/YYYY</td>
-		      <td>Username</td>
-		      <td>Auth</td>
-		      <td><span class="label label-primary">Active</span> <span class="label label-danger">Closed</span></td>
+		      <td>{{ticketId}}</td>
+		      <td>{{passPhrase}}</td>
+		      <td>{{parseDate createdAt}}</td>
+		      <td>{{ticketFor}}</td>
+		      <td><span class="label label-{{status}}">{{status}}</span></td>
 		      <td>25</td>
 		    </tr>
+		    {{/each}}
 		  </tbody>
 		</table>
 	</div>

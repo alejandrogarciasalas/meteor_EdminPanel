@@ -1,4 +1,5 @@
 <template name="userShow">
+	<!-- {{#with user}} -->
 	<div class="container-xs pvp-7">
 		<div class="panel">
 			<div class="head bg-white">
@@ -7,7 +8,7 @@
 				</div>
 				<div class="actions pt-7">
 					<nav>
-						<a href="#">Actions</a>
+						<a href="{{userOwnProfile}}">Edit</a>
 					</nav>
 				</div>
 			</div>
@@ -31,7 +32,7 @@
 									<td><strong>Lastname</strong></td><td>Ibarra Martínez</td>
 								</tr>
 								<tr>
-									<td><strong>Email</strong></td><td>yo@soygus.com</td>
+									<td><strong>Email</strong></td><td>{{email}}</td>
 								</tr>
 								<tr>
 									<td><strong>Birthday</strong></td><td>DD/MM/YYYY</td>
@@ -63,4 +64,5 @@
 			<div class="footer"></div>
 		</div>
 	</div>
+	<!-- {{/with}} -->
 </template>

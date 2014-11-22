@@ -7,7 +7,7 @@ Package.describe(
 
 Package.onUse(function (api) {
 
-  api.use(['aldeed:simple-schema', 'aldeed:collection2', 'telescope:i18n'], ['client', 'server']);
+  api.use(['aldeed:simple-schema', 'aldeed:collection2', 'telescope:i18n', 'audit-argument-checks'], ['client', 'server']);
 
   api.use([
     'jquery',
