@@ -46,5 +46,8 @@ Tickets.attachSchema(Schemas.Ticket);
 Tickets.allow({
   insert: function(userId, ticketObj) {
     return true;
+  },
+  update: function(userId, ticketObj) {
+    return true;
   }
 });

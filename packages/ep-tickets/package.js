@@ -13,7 +13,8 @@ Package.onUse(function (api) {
     'jquery',
     'underscore',
     'iron:router',
-    'templating'
+    'templating',
+    'ui'
   ], 'client');
 
   api.add_files(['lib/ep-tickets.js'], ['client', 'server']);
@@ -23,7 +24,9 @@ Package.onUse(function (api) {
     'lib/client/views/tickets_index.html',
     'lib/client/views/tickets_index.js',
     'lib/client/views/ticket_new.html',
-    'lib/client/views/ticket_new.js'
+    'lib/client/views/ticket_new.js',
+    'lib/client/views/auth_signup.html',
+    'lib/client/views/auth_signup.js'
     ], ['client']);
 
   api.add_files(['lib/server/publications.js'], ['server']);
