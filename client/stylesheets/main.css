@@ -5773,7 +5773,8 @@ body {
       .sidebar-left > ul.center li a {
         display: block;
         padding: 14px;
-        position: relative; }
+        position: relative;
+        color: #8fa2b6; }
         .sidebar-left > ul.center li a:before, .sidebar-left > ul.center li a:after {
           content: " ";
           display: table; }
@@ -5784,6 +5785,7 @@ body {
           text-decoration: none; }
         .sidebar-left > ul.center li a.active {
           background: #344150;
+          color: #A0E8BC;
           -webkit-box-shadow: inset 2px 0 0 0 #A0E8BC;
           -moz-box-shadow: inset 2px 0 0 0 #A0E8BC;
           box-shadow: inset 2px 0 0 0 #A0E8BC; }
@@ -5818,9 +5820,15 @@ body {
         display: none; }
         .sidebar-left > ul.center li > ul.sidebar-left-dropdown li a {
           padding: 7px 14px;
-          background: #6d86a0; }
-          .sidebar-left > ul.center li > ul.sidebar-left-dropdown li a:hover {
+          background: #6d86a0;
+          color: #e6eaef; }
+          .sidebar-left > ul.center li > ul.sidebar-left-dropdown li a:hover, .sidebar-left > ul.center li > ul.sidebar-left-dropdown li a.active {
             background: #3a4959; }
+          .sidebar-left > ul.center li > ul.sidebar-left-dropdown li a.active {
+            color: #A0E8BC;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none; }
       .sidebar-left > ul.center li.dropdown-open a i:last-child:before {
         content: "\e75f";
         font-family: "icomoon";
@@ -5845,9 +5853,11 @@ body {
     width: 100%; }
     .sidebar-left > ul.bottom li a {
       display: block;
-      padding: 14px; }
+      padding: 14px;
+      color: #8fa2b6; }
       .sidebar-left > ul.bottom li a:hover, .sidebar-left > ul.bottom li a.active {
         text-decoration: none;
+        color: #A0E8BC;
         background: #2c3743; }
       .sidebar-left > ul.bottom li a img {
         border-radius: 50%;

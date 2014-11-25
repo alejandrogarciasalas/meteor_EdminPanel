@@ -31,12 +31,14 @@
 				padding: $container-fluid;
 				@include clearfix;
 				position: relative;
+				color: $blue;
 				&:hover {
 					background: darken($blue-darker, 3%);
 					text-decoration: none;
 				}
 				&.active {
 					background: darken($blue-darker, 3%);
+					color: $brand-primary;
 					@include box-shadow(inset 2px 0 0 0 $brand-primary);
 				}
 				i:first-child {
@@ -81,8 +83,14 @@
 					a {
 						padding: $container-fluid / 2 $container-fluid;
 						background: lighten($blue-dark, 3%);
-						&:hover {
+						color: $blue-light;
+						&:hover,
+						&.active {
 							background: $blue-darker;
+						}
+						&.active {
+							color: $brand-primary;
+							@include box-shadow(none);
 						}
 					}
 				}
@@ -122,9 +130,11 @@
 			a {
 				display: block;
 				padding: $container-fluid;
+				color: $blue;
 				&:hover,
 				&.active {
 					text-decoration: none;
+					color: $brand-primary;
 					background: darken($blue-darker, 7%);
 				}
 				img {

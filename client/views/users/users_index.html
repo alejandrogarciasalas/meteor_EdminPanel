@@ -11,29 +11,29 @@
 		<table class="table table-hover table-custom">
 		  <thead>
 		    <tr>
-		      <td>Pic</td>
-		      <td>Name</td>
-		      <td>Lastname</td>
-		      <td>Organization</td>
-		      <td>Type</td>
-		      <td>Birthday</td>
-		      <td>Gender</td>
-		      <td>State labels</td>
-		      <td>Actions</td>
+		      <td>{{i18n 'Pic'}}</td>
+		      <td>{{i18n 'Name'}}</td>
+		      <td>{{i18n 'Lastname'}}</td>
+		      <td>{{i18n 'Organization'}}</td>
+		      <td>{{i18n 'Type'}}</td>
+		      <td>{{i18n 'Birthday'}}</td>
+		      <td>{{i18n 'Gender'}}</td>
+		      <td>{{i18n 'Actions'}}</td>
 		    </tr>
 		  </thead>
 		  <tbody>
+		  	{{#each users}}
 		    <tr>
 		      <td><img src="/img/user.jpg" width="28" height="28" class="img-circle" alt="user_pic"></td>
-		      <td>Gus</td>
-		      <td>Ibarra</td>
-		      <td>Organization Name</td>
-		      <td>User Type</td>
-		      <td>DD/MM/YYYY</td>
-		      <td>gender</td>
-		      <td><span class="label label-default">Default</span> <span class="label label-primary">Primary</span> <span class="label label-danger">Danger</span></td>
-		      <td><a href="{{pathFor 'user.show'}}" class="btn btn-sm btn-default">See profile</a> <a href="#" class="text-danger">Delete</a></td>
+		      <td>{{name}}</td>
+		      <td>{{lastname}}</td>
+		      <td>{{orgName}}</td>
+		      <td>{{type}}</td>
+		      <td>{{birthday}}</td>
+		      <td>{{info.gender}}</td>
+		      <td><a href="/user-show/{{_id}}" class="">{{i18n 'See profile'}}</a></td>
 		    </tr>
+		    {{/each}}
 		  </tbody>
 		</table>
 	</div>

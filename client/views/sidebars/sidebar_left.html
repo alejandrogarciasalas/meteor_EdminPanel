@@ -2,27 +2,43 @@
 	<div class="sidebar-left"> <!-- SIDEBAR LEFT -->
     <ul class="center">
       {{#if isAdmin}}
-        <li>
+        <li class="has-dropdown">          
           <a href="{{pathFor 'org.show'}}" 
             class="{{returnIfRoute 'org.show' 'active'}} {{returnIfRoute 'org.edit' 'active'}}">
             <i class="icon-library"></i> 
-            <span>Organization</span>
+            <span>{{i18n 'Organization'}}</span>
           </a>
+          <ul class="sidebar-left-dropdown">
+            <li><a href="{{pathFor 'org.show'}}" class="{{returnIfRoute 'org.show' 'active'}}">{{i18n 'See'}} org</a></li>
+            <li><a href="{{pathFor 'org.edit'}}" class="{{returnIfRoute 'org.edit' 'active'}}">{{i18n 'Edit'}}</a></li>
+          </ul>
         </li>
-        <li>
+        <li class="has-dropdown">
           <a href="{{pathFor 'tickets.index'}}" 
             class="{{returnIfRoute 'tickets.index' 'active'}} {{returnIfRoute 'ticket.new' 'active'}}">
             <i class="icon-ticket"></i> 
             <span>Tickets</span>
           </a>
+          <ul class="sidebar-left-dropdown">
+            <li><a href="{{pathFor 'tickets.index'}}" class="{{returnIfRoute 'tickets.index' 'active'}}">Tickets</a></li>
+            <li><a href="{{pathFor 'ticket.new'}}" class="{{returnIfRoute 'ticket.new' 'active'}}">{{i18n 'New ticket'}}</a></li>
+          </ul>
         </li>
         <li>
           <a href="{{pathFor 'users.index'}}" 
             class="{{returnIfRoute 'users.index' 'active'}} {{returnIfRoute 'user.show' 'active'}}">
             <i class="icon-users"></i> 
-            <span>Users</span>
+            <span>{{i18n 'Users'}}</span>
           </a>
         </li>
+        <!-- <li class="has-dropdown">
+          <a href="#"><i class="icon-home2"></i> <span>Dashboard</span> <i></i></a>
+          <ul class="sidebar-left-dropdown">
+            <li><a href="#">Subnav</a></li>
+            <li><a href="#">Subnav</a></li>
+            <li><a href="#">Subnav</a></li>
+          </ul>
+        </li> -->
       {{/if}}
       {{#if isTeacher}}
         <li>
@@ -36,7 +52,7 @@
           <a href="{{pathFor 'users.index'}}" 
             class="{{returnIfRoute 'users.index' 'active'}}">
             <i class="icon-ticket"></i> 
-            <span>Students</span>
+            <span>{{i18n 'Students'}}</span>
           </a>
         </li>
       {{/if}}
@@ -52,9 +68,16 @@
         </a>
       </li>
       <li>
+        <a href="{{pathFor 'settings.edit'}}" 
+          class="{{returnIfRoute 'settings.edit' 'active'}}">
+          <i class="icon-gear"></i> 
+          <span>{{i18n 'Settings'}}</span>
+        </a>
+      </li>
+      <li>
         <a href="#" id="signout">
           <i class="icon-power"></i> 
-          <span>Salir</span>
+          <span>{{i18n 'Logout'}}</span>
         </a>
       </li>
     </ul>

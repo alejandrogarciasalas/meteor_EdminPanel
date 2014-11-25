@@ -4,6 +4,11 @@ Meteor.publish("userProfile", function (userId) {
 });
 
 Meteor.publish("users", function () {
-	// check(userId, String);
+	// check(orgRef, String);
   return Meteor.users.find();
+});
+
+Meteor.publish("usersByOrg", function (orgRef) {
+	check(orgRef, String);
+  return Meteor.users.find({orgRef: orgRef});
 });
