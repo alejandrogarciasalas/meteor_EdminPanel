@@ -23,7 +23,7 @@ Template.ticketNew.events({
 		  'ticketFor': ticketFor,
 		  'status': 'active',
 		  'userRef': Meteor.userId(),
-		  'usersRef': [''], // Contains userId's if ticket is sent to existent users
+		  'usersRef': ['empty'], // Contains userId's if ticket is sent to existent users
 		  'limit': limit
 		};
 

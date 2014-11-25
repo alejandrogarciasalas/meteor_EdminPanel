@@ -2,7 +2,7 @@
 
 Tickets = new Mongo.Collection("tickets");
 
-var Schemas = {};
+Schemas = {};
 
 Schemas.Ticket = new SimpleSchema({
   '_id': {
@@ -51,3 +51,22 @@ Tickets.allow({
     return true;
   }
 });
+
+/* ==============================================
+    Meteor METHODS
+  ============================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

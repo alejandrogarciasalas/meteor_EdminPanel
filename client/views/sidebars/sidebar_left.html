@@ -1,11 +1,62 @@
 <template name="sidebarLeft">
 	<div class="sidebar-left"> <!-- SIDEBAR LEFT -->
     <ul class="center">
-      <li><a href="{{pathFor 'tickets.index'}}" class="{{returnIfRoute 'tickets.index' 'active'}} {{returnIfRoute 'ticket.new' 'active'}}"><i class="icon-ticket"></i> <span>Tickets</span></a></li>
+      {{#if isAdmin}}
+        <li>
+          <a href="{{pathFor 'org.show'}}" 
+            class="{{returnIfRoute 'org.show' 'active'}} {{returnIfRoute 'org.edit' 'active'}}">
+            <i class="icon-library"></i> 
+            <span>Organization</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{pathFor 'tickets.index'}}" 
+            class="{{returnIfRoute 'tickets.index' 'active'}} {{returnIfRoute 'ticket.new' 'active'}}">
+            <i class="icon-ticket"></i> 
+            <span>Tickets</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{pathFor 'users.index'}}" 
+            class="{{returnIfRoute 'users.index' 'active'}} {{returnIfRoute 'user.show' 'active'}}">
+            <i class="icon-users"></i> 
+            <span>Users</span>
+          </a>
+        </li>
+      {{/if}}
+      {{#if isTeacher}}
+        <li>
+          <a href="{{pathFor 'tickets.index'}}" 
+            class="{{returnIfRoute 'tickets.index' 'active'}} {{returnIfRoute 'ticket.new' 'active'}}">
+            <i class="icon-ticket"></i> 
+            <span>Tickets</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{pathFor 'users.index'}}" 
+            class="{{returnIfRoute 'users.index' 'active'}}">
+            <i class="icon-ticket"></i> 
+            <span>Students</span>
+          </a>
+        </li>
+      {{/if}}
+      {{#if isStudent}}
+      {{/if}}
     </ul>
     <ul class="bottom">
-      <li class="user"><a href="{{userOwnProfile}}" class="{{returnIfRoute 'user.show' 'active'}} {{returnIfRoute 'user.edit' 'active'}}"><img src="/img/user.jpg" alt=""><span>G. Andrés Ibarra</span></a></li>
-      <li><a href="#" id="signout"><i class="icon-power"></i> <span>Salir</span></a></li>
+      <li class="user">
+        <a href="{{userOwnProfile}}" 
+          class="{{returnIfRoute 'user.show' 'active'}} {{returnIfRoute 'user.edit' 'active'}}">
+          <img src="/img/user.jpg" alt="">
+          <span>G. Andrés Ibarra</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" id="signout">
+          <i class="icon-power"></i> 
+          <span>Salir</span>
+        </a>
+      </li>
     </ul>
   </div> <!-- END:SIDEBAR LEFT -->
 </template>

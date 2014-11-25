@@ -1,6 +1,6 @@
 Meteor.publish('userTickets', function(userId){
 	check(userId, String);
-	return Tickets.find({userRef: this.userId});
+	return Tickets.find({userRef: userId});
 });
 
 Meteor.publish('tickets', function(){

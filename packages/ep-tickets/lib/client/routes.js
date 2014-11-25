@@ -29,7 +29,7 @@ Router.route('/tickets-index', {
 			view: {
 				title: i18n.t('Tickets created by you')
 			},
-			tickets: Tickets.find({userRef: userId})
+			tickets: Tickets.find({userRef: Meteor.userId()})
 		}
 	},
 	waitOn: function(){

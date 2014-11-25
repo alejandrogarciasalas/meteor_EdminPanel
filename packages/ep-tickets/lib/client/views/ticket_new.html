@@ -20,12 +20,17 @@
 					<div class="form-group">
 						<label for="">Ticket for:</label>
 						<select name="" id="ticket-for" class="form-control select-override">
-							<option value="auth.admins">Inviting admins to join Edmin Panel</option>
-							<option value="auth.teachers">Inviting teachers to join Edmin Panel</option>
-							<option value="auth.students">Inviting students to join Edmin Panel</option>
-							<option value="groups">Inviting people to join one of my groups</option>
-							<option value="event">Inviting teachers to an event</option>
-							<option value="assistance">Inviting people to take assistance</option>
+							{{#if isAdmin}}
+								<option value="auth.admin">Inviting admins to join Edmin Panel</option>
+								<option value="auth.teacher">Inviting teachers to join Edmin Panel</option>
+								<option value="auth.student">Inviting students to join Edmin Panel</option>
+								<!-- <option value="groups">Inviting people to join one of my groups</option> -->
+								<!-- <option value="event">Inviting teachers to an event</option> -->
+								<!-- <option value="assistance">Inviting people to take assistance</option> -->
+							{{/if}}
+							{{#if isTeacher}}
+								<option value="auth.student">Inviting students to join Edmin Panel</option>
+							{{/if}}
 						</select>
 					</div>
 					<div class="form-group">
