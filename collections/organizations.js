@@ -1,8 +1,10 @@
 // 'use strict';
 
-Orgs = new Mongo.Collection("orgs");
 
 Schemas = {};
+UI.registerHelper("Schemas", Schemas);
+
+Orgs = new Mongo.Collection("orgs");
 
 Schemas.Org = new SimpleSchema({
   '_id': {
@@ -16,11 +18,13 @@ Schemas.Org = new SimpleSchema({
     type: Date
   },
   'name': {
-  	type: String
+  	type: String,
+    label: i18n.t('Name')
   },
   'description': {
   	type: String,
-  	optional: true
+  	optional: true,
+    label: i18n.t('Description')
   },
   'groupsRef': {
   	type: [String],

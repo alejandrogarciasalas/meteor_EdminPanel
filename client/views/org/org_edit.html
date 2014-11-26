@@ -11,11 +11,15 @@
 					</nav>
 				</div>
 			</div>
-			<form action="">
-				<div class="body">
-					
+			{{#autoForm collection="Orgs" doc=org id="orgEditForm" type="update"}}
+				<div class="body p-14">
+					{{> afQuickField name='name'}}
+					{{> afQuickField name='description' rows="3"}}
 				</div>
-			</form>
+				<div class="footer p-14 text-right">
+					<button type="submit" class="btn btn-outline btn-danger">{{i18n 'Save'}}</button>
+				</div>
+			{{/autoForm}}
 		</div>
 	</div>
 </template>

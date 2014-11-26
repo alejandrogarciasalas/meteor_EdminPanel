@@ -13,6 +13,7 @@ Template.authSignup.events({
         ticketPassphraseVal = t.find('#ticket-passphrase').value;
 
     // TICKET CONTROL
+    console.log(this);
     var ticketLimit = this.ticket.limit,
         ticketStatus = this.ticket.status,
         ticketFor = this.ticket.ticketFor,

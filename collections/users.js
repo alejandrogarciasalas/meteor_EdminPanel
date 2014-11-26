@@ -1,6 +1,6 @@
 // 'use strict';
 
-Schemas = {};
+// Schemas = {};
 
 Schemas.User = new SimpleSchema({
   '_id': {
@@ -8,10 +8,6 @@ Schemas.User = new SimpleSchema({
     optional: true
   },
   'createdAt': {
-    type: Date,
-    optional: true
-  },
-  'updatedAt': {
     type: Date,
     optional: true
   },
@@ -30,14 +26,6 @@ Schemas.User = new SimpleSchema({
     optional: true,
     blackbox: true
   },
-	'name': {
-		type: String,
-		optional: true
-	},
-	'lastname': {
-		type: String,
-		optional: true
-	},
 	'type': {
 		type: String,
 		optional: true
@@ -58,45 +46,65 @@ Schemas.User = new SimpleSchema({
 		type: String,
 		optional: true
 	},
+	'orgRef': {
+		type: String,
+		optional: true
+	},
+  'updatedAt': {
+    type: Date,
+    optional: true
+  },
+	'name': {
+		type: String,
+		optional: true,
+		label: i18n.t('Name')
+	},
+	'lastname': {
+		type: String,
+		optional: true,
+		label: i18n.t('Lastname')
+	},
 	'info': {
 		type: Object,
 		optional: true
 	},
-	'info.$.gender': {
+	'info.gender': {
 		type: String,
-		optional: true
+		optional: true,
+		label: i18n.t('Gender'),
+		allowedValues: [i18n.t('Male'), i18n.t('Female')]		
 	},
-	'info.$.birthday': {
-		type: String,
+	'info.birthday': {
+		type: Date,
 		optional: true
 	},
 	'address': {
 		type: Object,
 		optional: true
 	},
-	'address.$.ZIP': {
+	'address.ZIP': {
 		type: String,
 		optional: true
 	},
-	'address.$.street': {
+	'address.street': {
 		type: String,
 		optional: true
 	},
-	'address.$.country': {
+	'address.country': {
 		type: String,
 		optional: true
 	},
-	'address.$.city': {
-		type: String,
-		optional: true
-	},
-	'orgRef': {
+	'address.city': {
 		type: String,
 		optional: true
 	}
 });
 
+// Schemas.UserProfile = new SimpleSchema({
+// });
+
 Meteor.users.attachSchema(Schemas.User);
+// Meteor.users.attachSchema(Schemas.UserProfile);
 
 Meteor.users.allow({
 	update: function(userId, doc) {return true; },

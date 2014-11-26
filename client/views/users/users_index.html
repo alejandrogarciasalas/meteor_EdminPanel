@@ -22,14 +22,14 @@
 		    </tr>
 		  </thead>
 		  <tbody>
-		  	{{#each users}}
+		  	{{#each usersByType}}
 		    <tr>
 		      <td><img src="/img/user.jpg" width="28" height="28" class="img-circle" alt="user_pic"></td>
 		      <td>{{name}}</td>
 		      <td>{{lastname}}</td>
 		      <td>{{orgName}}</td>
 		      <td>{{type}}</td>
-		      <td>{{birthday}}</td>
+		      <td>{{parseDate info.birthday}}</td>
 		      <td>{{info.gender}}</td>
 		      <td><a href="/user-show/{{_id}}" class="">{{i18n 'See profile'}}</a></td>
 		    </tr>

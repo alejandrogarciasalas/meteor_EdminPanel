@@ -6,5 +6,11 @@ Template.userShow.helpers({
 	},
 	userOwnProfile: function(){
 		return '/user-edit/' + Meteor.userId();
+	},
+	orgName: function(){
+		var orgRef = getOrg();
+		var orgName = Orgs.findOne({_id: orgRef}, {fields: {name: 1}});
+		orgName = orgName.name;
+		return orgName;
 	}
 });

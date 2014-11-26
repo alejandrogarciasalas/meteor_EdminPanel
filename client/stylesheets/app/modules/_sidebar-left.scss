@@ -35,6 +35,7 @@
 				&:hover {
 					background: darken($blue-darker, 3%);
 					text-decoration: none;
+					color: $brand-primary;
 				}
 				&.active {
 					background: darken($blue-darker, 3%);

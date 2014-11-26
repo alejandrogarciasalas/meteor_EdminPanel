@@ -5782,7 +5782,8 @@ body {
           clear: both; }
         .sidebar-left > ul.center li a:hover {
           background: #344150;
-          text-decoration: none; }
+          text-decoration: none;
+          color: #A0E8BC; }
         .sidebar-left > ul.center li a.active {
           background: #344150;
           color: #A0E8BC;
