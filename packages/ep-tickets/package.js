@@ -13,7 +13,8 @@ Package.onUse(function (api) {
     'telescope:i18n',
     'audit-argument-checks',
     'accounts-password',
-    'accounts-base'
+    'accounts-base',
+    'meteorhacks:fast-render'
   ], ['client', 'server']);
 
   api.use([
@@ -24,7 +25,7 @@ Package.onUse(function (api) {
     'ui'
   ], 'client');
 
-  api.add_files(['lib/ep-tickets.js'], ['client', 'server']);
+  api.add_files(['lib/ep-tickets.js', 'lib/controllers/AuthController.js'], ['client', 'server']);
 
   api.add_files([
     'lib/client/routes.js',
@@ -38,5 +39,5 @@ Package.onUse(function (api) {
 
   api.add_files(['lib/server/publications.js'], ['server']);
  
-  // api.export(['']);
+  api.export(['Tickets']);
 });

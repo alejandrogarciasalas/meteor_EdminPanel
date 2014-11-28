@@ -13,7 +13,6 @@ Template.authSignup.events({
         ticketPassphraseVal = t.find('#ticket-passphrase').value;
 
     // TICKET CONTROL
-    console.log(this);
     var ticketLimit = this.ticket.limit,
         ticketStatus = this.ticket.status,
         ticketFor = this.ticket.ticketFor,
@@ -36,7 +35,8 @@ Template.authSignup.events({
               userData = {
                 updatedAt: new Date(),
                 type: ticketFor,
-                orgRef: orgRef
+                orgRef: orgRef,
+                ticketBy: sentBy
               },
               _ticketId = {
                 limit: ticketLimit
@@ -81,7 +81,7 @@ Template.authSignup.events({
                       // console.log('Ticket limit updated');
                     }
                   });
-                  Router.go('user.show', {_id: Meteor.userId()});
+                  Router.go('user.edit', {_id: Meteor.userId()});
                 }
               });
             }

@@ -50,6 +50,10 @@ Schemas.User = new SimpleSchema({
 		type: String,
 		optional: true
 	},
+	'ticketBy': {
+		type: String,
+		optional: true
+	},
   'updatedAt': {
     type: Date,
     optional: true

@@ -10,15 +10,7 @@ Router.route('/signup/:_ticketId', {
 	yieldRegions: {
     'navTop': {to: 'navTop'},
   },
-  data: function(){
-  	return {
-  		ticket: Tickets.findOne({_id: this.params._ticketId}),
-  		users: Meteor.users.find()
-  	};
-  },
-  waitOn: function(){
-  	return [Meteor.subscribe('tickets'), Meteor.subscribe('users')];
-  }
+  controller: 'AuthSignUpController'
 });
 
 Router.route('/tickets-index', {

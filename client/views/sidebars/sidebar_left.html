@@ -27,18 +27,10 @@
         <li>
           <a href="{{pathFor 'users.index'}}" 
             class="{{returnIfRoute 'users.index' 'active'}} {{returnIfRoute 'user.show' 'active'}}">
-            <i class="icon-users"></i> 
+            <i class="icon-users2"></i> 
             <span>{{i18n 'Users'}}</span>
           </a>
         </li>
-        <!-- <li class="has-dropdown">
-          <a href="#"><i class="icon-home2"></i> <span>Dashboard</span> <i></i></a>
-          <ul class="sidebar-left-dropdown">
-            <li><a href="#">Subnav</a></li>
-            <li><a href="#">Subnav</a></li>
-            <li><a href="#">Subnav</a></li>
-          </ul>
-        </li> -->
       {{/if}}
       {{#if isTeacher}}
         <li>
@@ -51,7 +43,7 @@
         <li>
           <a href="{{pathFor 'users.index'}}" 
             class="{{returnIfRoute 'users.index' 'active'}}">
-            <i class="icon-ticket"></i> 
+            <i class="icon-graduation-hat"></i> 
             <span>{{i18n 'Students'}}</span>
           </a>
         </li>

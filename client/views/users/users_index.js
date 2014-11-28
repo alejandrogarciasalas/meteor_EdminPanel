@@ -11,10 +11,10 @@ Template.usersIndex.helpers({
 	}, 
 	usersByType: function(){
 		if (isAdmin(Meteor.userId())) {
-			var orgRef = getOrg();
+			var orgRef = getOrg();			
 			return Meteor.users.find({orgRef: orgRef});
 		} else {
-			return Meteor.users.find({type: 'auth.student'});
+			return Meteor.users.find({ticketBy: Meteor.userId()});
 		}
 	}
 });

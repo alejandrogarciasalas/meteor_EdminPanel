@@ -17,6 +17,7 @@
 		      <td>{{i18n 'Organization'}}</td>
 		      <td>{{i18n 'Type'}}</td>
 		      <td>{{i18n 'Birthday'}}</td>
+		      <td>{{i18n 'Joined at'}}</td>
 		      <td>{{i18n 'Gender'}}</td>
 		      <td>{{i18n 'Actions'}}</td>
 		    </tr>
@@ -30,6 +31,7 @@
 		      <td>{{orgName}}</td>
 		      <td>{{type}}</td>
 		      <td>{{parseDate info.birthday}}</td>
+		      <td>{{parseDate createdAt}}</td>
 		      <td>{{info.gender}}</td>
 		      <td><a href="/user-show/{{_id}}" class="">{{i18n 'See profile'}}</a></td>
 		    </tr>
