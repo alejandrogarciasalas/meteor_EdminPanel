@@ -1,6 +1,10 @@
 Meteor.publish('orgByUser', function(orgRef){
 	check(orgRef, String);
-	return Orgs.find({_id: orgRef});
+	var options = {
+    limit: 1,
+    fields: {_id: 1}
+  };
+	return Orgs.find({_id: orgRef}, options);
 });
 
 Meteor.publish('orgs', function(){

@@ -9,10 +9,16 @@ Meteor.publish('users', function () {
 });
 
 Meteor.publish('usersByOrg', function (orgRef) {
-	// if (orgRef) {
-		check(orgRef, String);
-	  return Meteor.users.find({orgRef: orgRef});
-	// } else {
-		// return false;
-	// }
+	check(orgRef, String);
+  return Meteor.users.find({orgRef: orgRef});
+});
+
+Meteor.publish('userOrg', function(userId){
+	var sub = this;
+	check(userId, String);
+	var options = {
+    limit: 1,
+    fields: {orgRef: 1}
+  };
+	return Meteor.users.find({_id: userId}, options);
 });

@@ -8,7 +8,7 @@ Template.userShow.helpers({
 		return '/user-edit/' + Meteor.userId();
 	},
 	orgName: function(){
-		var orgRef = getOrg();
+		var orgRef = Session.get('orgRef');
 		var orgName = Orgs.findOne({_id: orgRef}, {fields: {name: 1}});
 		orgName = orgName.name;
 		return orgName;

@@ -1,4 +1,11 @@
-'use strict';
+// 'use strict';
+
+if (Meteor.loggingIn()) {
+  var orgRef = Meteor.users.findOne(Meteor.userId(), {orgRef: 1});
+  orgRef = orgRef.orgRef;
+  console.log(orgRef);
+  Session.set('orgRef', orgRef);
+}
 
 Template.authSignin.events({
 	'submit #signin-form': function(e, t){

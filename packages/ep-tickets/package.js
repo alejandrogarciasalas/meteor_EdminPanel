@@ -25,7 +25,7 @@ Package.onUse(function (api) {
     'ui'
   ], 'client');
 
-  api.add_files(['lib/ep-tickets.js', 'lib/controllers/AuthController.js'], ['client', 'server']);
+  api.add_files(['lib/ep-tickets.js'], ['client', 'server']);
 
   api.add_files([
     'lib/client/routes.js',
