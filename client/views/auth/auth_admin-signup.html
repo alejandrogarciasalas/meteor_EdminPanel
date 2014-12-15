@@ -1,0 +1,28 @@
+<template name="authAdminSignup">
+	<div class="container-xs minh-630 pvp-7">
+    <div class="panel bg-white">
+      <div class="head">
+        <div class="title">
+          <h5 class="uppercase">Create Admin Account</h5>
+        </div>
+      </div>
+      <!-- {{#autoForm collection="Orgs" id="orgNewForm" type="insert"}} -->
+        <div class="body p-14">
+        	<p><strong>Almost there!</strong><br>By completing the following profile information you are creating an <strong>admin account for {{orgName}}</strong>.</p><p>Please read the <a href="#">docs</a> and <a href="#">features</a> to take the most out of your <em>EdminPanel</em> account.</p>
+    			<!-- {{> afQuickField name='name'}} -->
+    			<!-- {{> afQuickField name='description' rows="3"}}           -->
+        </div>
+        <div class="footer p-14">
+          <div class="row">
+            <div class="col-xs-6">
+              <a href="#">{{i18n 'Terms and conditions'}}</a>
+            </div>
+            <div class="col-xs-6 text-right">
+              <button type="submit" class="btn btn-outline btn-danger">Create admin user</button>
+            </div>
+          </div>
+        </div>
+      <!-- {{/autoForm}} -->
+    </div>
+  </div>
+</template>

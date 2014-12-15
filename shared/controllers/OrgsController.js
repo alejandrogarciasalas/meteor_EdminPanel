@@ -34,3 +34,9 @@ OrgEditController = RouteController.extend({
 	},
 	fastRender: true
 });
+
+OrgNewController = RouteController.extend({
+	// data: function(){},
+	// waitOn: function(){},
+	// fastRender: true
+});

@@ -12,10 +12,12 @@ Schemas.Org = new SimpleSchema({
     optional: true
   },
   'createdAt': {
-    type: Date
+    type: Date,
+    optional: true
   },
   'updatedAt': {
-    type: Date
+    type: Date,
+    optional: true
   },
   'name': {
   	type: String,

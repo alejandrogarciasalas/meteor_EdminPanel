@@ -1,0 +1,27 @@
+<template name="orgNew">
+	<div class="container-xs minh-630 pvp-7">
+    <div class="panel bg-white">
+      <div class="head">
+        <div class="title">
+          <h5 class="uppercase">New Organization</h5>
+        </div>
+      </div>
+      {{#autoForm collection="Orgs" id="orgNewForm" type="insert"}}
+        <div class="body p-14">
+    			{{> afQuickField name='name'}}
+    			{{> afQuickField name='description' rows="3"}}          
+        </div>
+        <div class="footer p-14">
+          <div class="row">
+            <div class="col-xs-6">
+              <a href="#">{{i18n 'Terms and conditions'}}</a>
+            </div>
+            <div class="col-xs-6 text-right">
+              <button type="submit" class="btn btn-outline btn-danger">Create organization</button>
+            </div>
+          </div>
+        </div>
+      {{/autoForm}}
+    </div>
+  </div>
+</template>
