@@ -12,6 +12,17 @@ body {
 .site-content {
 	min-height: 100%;
 	height: 100%;
+	position: relative;
+}
+
+// SIZE CONTROL
+	// I assume that the 'md' size is the default size
+	// Control the sizes of elements by using $size-control variables at the top of this file
+.size {
+	&.xs {}
+	&.sm {}
+	&.lg {}
+	&.xl {}
 }
 
 .site-wrapper {
@@ -22,9 +33,10 @@ body {
 		}
 		.site-content {
 			margin-left: 210px;
-			width: -moz-calc(100% - 210px);
-			width: -webkit-calc(100% - 210px);
-			width: calc(100% - 210px);
+			@include calc(width, "100% - 210px");
+			// width: -moz-calc(100% - 210px);
+			// width: -webkit-calc(100% - 210px);
+			// width: calc(100% - 210px);
 		}
 	}
 	&.sidebar-left-shrink {
@@ -54,9 +66,7 @@ body {
 						}
 					}
 					> ul {
-						position: absolute;
-						left: 100%;
-						top: 0;
+						@include position(absolute, 0 null null 100%);						
 						min-width: 140px;
 						li {
 							a {
@@ -108,9 +118,10 @@ body {
 		}
 		.site-content {
 			margin-left: 77px;
-			width: -moz-calc(100% - 77px);
-			width: -webkit-calc(100% - 77px);
-			width: calc(100% - 77px);
+			@include calc(width, "100% - 77px");
+			// width: -moz-calc(100% - 77px);
+			// width: -webkit-calc(100% - 77px);
+			// width: calc(100% - 77px);
 		}
 	}
 	&.sidebar-right-on {
@@ -124,10 +135,11 @@ body {
 	&.content-padding {
 		.site-content {
 			> .body {
-				padding-left: 140px;
-				padding-right: 140px;
-				padding-top: 35px;
-				padding-bottom: 84px;
+				@include padding(35px 140px 84px 140px);
+				// padding-left: 140px;
+				// padding-right: 140px;
+				// padding-top: 35px;
+				// padding-bottom: 84px;
 			}
 		}
 	}

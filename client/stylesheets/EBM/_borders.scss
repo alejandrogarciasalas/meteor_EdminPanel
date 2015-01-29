@@ -1,13 +1,4 @@
-// Rounded borders when no bootstrap
-@mixin rounded-borders($rounded-borders) {
-	@if $rounded-borders == true {
-		.rounded-borders {
-			border-radius: $border-radius-base;
-		}
-	}
-}
-@include rounded-borders($rounded-borders);
-
+/* EBM Borders */
 // Border Radius
 .border-radius {
   border-radius: $border-radius-base;
@@ -26,13 +17,36 @@
   border: none!important;
 }
 
-// // Border colors
-// $border-width: 1px;
-// $border-style: solid;
+// Border colors
+$border-sides-list: 
+	"top",
+	"right",
+	"bottom",
+	"left";
 
-// @for $i from 1 to length($grayscale-sufix-list) {
-// 	.border-color-#{nth($grayscale-sufix-list)} {
-// 		border: $border-width $border-style #{nth($grayscale-list, $i)};
-// 	}
-// }
+$border-width: 1px;
+$border-style: solid;
 
+@for $z from 1 to length($border-sides-list) + 1 {
+	@for $i from 1 to length($brand-colors-sufix-list) {
+		.border-#{nth($border-sides-list, $z)}-#{nth($brand-colors-sufix-list, $i)} {
+			border-#{nth($border-sides-list, $z)}: $border-width $border-style #{nth($brand-colors-list, $i)};
+		}
+	}
+}
+@for $z from 1 to length($border-sides-list) + 1 {
+	@for $i from 1 to length($grayscale-sufix-list) {
+		.border-#{nth($border-sides-list, $z)}-#{nth($grayscale-sufix-list, $i)} {
+			border-#{nth($border-sides-list, $z)}: $border-width $border-style #{nth($grayscale-list, $i)};
+		}
+	}
+}
+
+// Border sizes
+@for $z from 2 to length($sizes-list) + 1 {
+	@for $i from 1 to length($border-sides-list) + 1 {
+		.border-#{nth($border-sides-list, $i)}-#{nth($sizes-list, $z)} {
+			border-#{nth($border-sides-list, $i)}-width: ($border-width + $z) !important;
+		}
+	}
+}

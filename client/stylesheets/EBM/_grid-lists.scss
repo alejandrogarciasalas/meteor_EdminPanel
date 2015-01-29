@@ -1,4 +1,5 @@
 // GRID LISTS
+$grid-list-item-height: 350px;
 ul.grid-list {
 	@include clearfix;
 	padding: 0;
@@ -8,6 +9,11 @@ ul.grid-list {
 		float: left;
 		padding: $grid-gutter-width / 2;
 		padding: rem($grid-gutter-width / 2);
+	}
+	&.grid-list-item-height {
+		> li {
+			min-height: $grid-list-item-height;
+		}
 	}
 	@for $i from 1 through 12 {
 		&.grid-list-#{$i} {

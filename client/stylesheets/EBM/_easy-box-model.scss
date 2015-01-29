@@ -47,14 +47,6 @@ $box-model-ch-abbr-percentage:
   'mbp-ch', 
   'mlp-ch';
 
-$media-control-list: 
-  $xs-only, 
-  $sm-up, 
-  $md-up, 
-  $lg-up;
-
-$children-elements: "> a, > span, > div, > li, > p, > h1, > h2, > h3, > h4, > h5, > h6, > ul, > ol, > section"; 
-
 @for $i from 0 through 10 {
   @for $j from 1 through length($box-model-sides) {
     .#{nth($box-model-abbr, $j)}-#{$i*$times} {
