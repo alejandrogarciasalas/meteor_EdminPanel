@@ -7,12 +7,12 @@ Template.usersIndex.helpers({
 		orgName = orgName.name;
 		return orgName;
 	}, 
-	usersByType: function(){
-		if (isAdmin(Meteor.userId())) {
-			var orgRef = Session.get('orgRef');
-			return Meteor.users.find({orgRef: orgRef});
-		} else {
-			return Meteor.users.find({ticketBy: Meteor.userId()});
-		}
-	}
+	// usersByType: function(){
+	// 	if (isAdmin(Meteor.userId())) {
+	// 		var orgRef = Session.get('orgRef');
+	// 		return Meteor.users.find({orgRef: orgRef});
+	// 	} else {
+	// 		return Meteor.users.find({ticketBy: Meteor.userId()});
+	// 	}
+	// }
 });

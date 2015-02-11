@@ -1,7 +1,7 @@
 <template name="sidebarLeft">
 	<div class="sidebar-left"> <!-- SIDEBAR LEFT -->
     <ul class="center">
-      {{#if isAdmin}}
+      <!-- {{#if isAdmin}} -->
         <li class="has-dropdown">          
           <a href="{{pathFor 'org.show'}}" 
             class="{{returnIfRoute 'org.show' 'active'}} {{returnIfRoute 'org.edit' 'active'}}">
@@ -31,9 +31,9 @@
             <span>{{i18n 'Users'}}</span>
           </a>
         </li>
-      {{/if}}
-      {{#if isTeacher}}
-        <li>
+      <!-- {{/if}} -->
+      <!-- {{#if isTeacher}} -->
+        <!-- <li>
           <a href="{{pathFor 'tickets.index'}}" 
             class="{{returnIfRoute 'tickets.index' 'active'}} {{returnIfRoute 'ticket.new' 'active'}}">
             <i class="icon-ticket"></i> 
@@ -46,10 +46,10 @@
             <i class="icon-graduation-hat"></i> 
             <span>{{i18n 'Students'}}</span>
           </a>
-        </li>
-      {{/if}}
-      {{#if isStudent}}
-      {{/if}}
+        </li> -->
+      <!-- {{/if}} -->
+      <!-- {{#if isStudent}} -->
+      <!-- {{/if}} -->
     </ul>
     <ul class="bottom">
       <li class="user">

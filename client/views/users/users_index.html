@@ -1,12 +1,5 @@
 <template name="usersIndex">
-	<div class="page-control">
-		<div class="container-fluid">
-		  <ul class="flex-space-between">
-		    <li></li>
-		    <li><a href="#" class="sidebar-right-trigger btn btn-outline btn-sm btn-gray">Toggle Filters</a></li>
-		  </ul>
-		</div>
-	</div>
+	{{> layoutControl}}
 	<div class="table-responsive">
 		<table class="table table-hover table-custom">
 		  <thead>
@@ -39,4 +32,5 @@
 		  </tbody>
 		</table>
 	</div>
+	{{> sidebarRight}}
 </template>

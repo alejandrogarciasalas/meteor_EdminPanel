@@ -16,9 +16,9 @@ Router.route('/signup/:_ticketId', {
   		users: Meteor.users.find()
   	};
   },
-  waitOn: function(){
-  	return [Meteor.subscribe('tickets'), Meteor.subscribe('users')];
-  }
+  // waitOn: function(){
+  // 	return [Meteor.subscribe('tickets'), Meteor.subscribe('users')];
+  // }
 });
 
 Router.route('/tickets-index', {
@@ -32,9 +32,9 @@ Router.route('/tickets-index', {
 			tickets: Tickets.find({userRef: Meteor.userId()})
 		}
 	},
-	waitOn: function(){
-		return Meteor.subscribe('userTickets', Meteor.userId());
-	}
+	// waitOn: function(){
+	// 	return Meteor.subscribe('userTickets', Meteor.userId());
+	// }
 });
 
 Router.route('/ticket-new', {
