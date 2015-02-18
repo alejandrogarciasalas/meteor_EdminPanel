@@ -31,6 +31,13 @@
             <span>{{i18n 'Users'}}</span>
           </a>
         </li>
+        <li>
+          <a href="{{pathFor 'evals.index'}}" 
+            class="{{returnIfRoute 'evals.index' 'active'}} {{returnIfRoute 'eval.show' 'active'}}">
+            <i class="icon-clipboard-check"></i>
+            <span>{{i18n 'Evals'}}</span>
+          </a>
+        </li>
       <!-- {{/if}} -->
       <!-- {{#if isTeacher}} -->
         <!-- <li>

@@ -42,3 +42,9 @@
 		}
 	}
 }
+
+.table-data-row {
+	@include flex-row;
+	@include clearfix;
+	min-height: 24px;
+}

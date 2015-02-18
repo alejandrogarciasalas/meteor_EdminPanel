@@ -2,8 +2,21 @@
 	<div class="layout-control">
 		<div class="container-fluid">
 		  <ul class="flex-space-between">
-		    <li></li>
-		    <li><a href="#" class="sidebar-right-trigger btn btn-outline btn-sm btn-gray">Toggle Filters</a></li>
+		    <li class="left">
+		    	{{#if layoutControl.left}}
+		    	{{/if}}
+		    </li>
+		    <li class="center">
+		    	{{#if layoutControl.center}}
+		    	{{/if}}
+		    </li>
+		    <li class="right">
+		    	{{#if layoutControl.right}}
+		    		{{#each layoutControl.right.actions}}
+		    			<a href="#" class="{{trigger}} btn btn-outline btn-sm btn-gray">{{text}}</a>
+		    		{{/each}}
+		    	{{/if}}
+		    </li>
 		  </ul>
 		</div>
 	</div>
